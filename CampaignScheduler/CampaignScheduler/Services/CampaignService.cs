@@ -2,12 +2,11 @@
 
 namespace CampaignScheduler.Services
 {
-    internal class CampaignService: ICampaignService
+    public class CampaignService: ICampaignService
     {
         private readonly ISenderService _senderService;
 
         private readonly InitialDataLoader _loader;
-        private Timer _newDayTimer;
 
         private List<Campaign> _campaigns;
         private List<Customer> _customers;
@@ -16,7 +15,7 @@ namespace CampaignScheduler.Services
 
         public CampaignService(ISenderService senderService, List<Campaign> campaigns, List<Customer> customers)
         {
-            _loader = new InitialDataLoader();
+            _loader = new InitialDataLoader(Constants.CAMPAIGNS_PATH, Constants.CUSTOMERS_PATH);
             _senderService = senderService;
             _campaigns = campaigns.OrderBy(c => c.Priority).ThenBy(c => c.SendTime).ToList();
             _customers = customers;
@@ -66,7 +65,7 @@ namespace CampaignScheduler.Services
             var timer = new Timer(RecreateDataOnNewDay, null, (int)timeToGo, Timeout.Infinite);
         }
 
-        private void RecreateDataOnNewDay(object state = default)
+        private void RecreateDataOnNewDay(object state)
         {
             ReloadCustomers();
             ReloadCampaigns();

@@ -2,7 +2,7 @@
 
 namespace CampaignScheduler.Services
 {
-    internal interface ISenderService
+    public interface ISenderService
     {
         Task SendCampaignAsync(Campaign campaign, Customer customer);
     }

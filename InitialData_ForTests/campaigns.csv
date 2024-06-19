@@ -1,0 +1,6 @@
+Template,Condition,SendTime,Priority
+Template A,Gender == Gender.Male,10:15:00,1
+Template B,Age > 45,10:05:00,2
+Template C,City == 'New York',10:10:00,5
+Template A,Deposit > 100,10:15:00,3
+Template C,IsNew,10:05:00,4

@@ -4,15 +4,21 @@ using Microsoft.CodeAnalysis.Scripting;
 
 namespace CampaignScheduler.Services
 {
-    internal class InitialDataLoader
+    public class InitialDataLoader
     {
-        private const string CAMPAIGNS_PATH = @"..\..\InitialData\campaigns.csv";
-        private const string CUSTOMERS_PATH = @"..\..\InitialData\customers.csv";
+        private readonly string _campaignsPath;
+        private readonly string _customersPath;
+
+        public InitialDataLoader(string campaignsPath, string customersPath)
+        {
+            _campaignsPath = campaignsPath;
+            _customersPath = customersPath;
+        }
 
         public List<Campaign> LoadCampaigns()
         {
             var campaigns = new List<Campaign>();
-            var lines = File.ReadAllLines(CAMPAIGNS_PATH);
+            var lines = File.ReadAllLines(_campaignsPath);
 
             foreach (var line in lines.Skip(1))
             {
@@ -38,7 +44,7 @@ namespace CampaignScheduler.Services
         public List<Customer> LoadCustomers()
         {
             var customers = new List<Customer>();
-            var lines = File.ReadAllLines(CUSTOMERS_PATH);
+            var lines = File.ReadAllLines(_customersPath);
 
             foreach (var line in lines.Skip(1))
             {
