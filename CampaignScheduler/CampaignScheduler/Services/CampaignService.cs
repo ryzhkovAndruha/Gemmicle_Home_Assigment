@@ -1,6 +1,4 @@
 ﻿using CampaignScheduler.Models;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
 
 namespace CampaignScheduler.Services
 {
@@ -34,15 +32,12 @@ namespace CampaignScheduler.Services
             var now = DateTime.Now;
             var sendingTasks = new List<Task>();
 
-            foreach (var customerCampaign in _customersCampaigns)
+            foreach (var customerCampaign in _customersCampaigns.Where(cc => now.TimeOfDay >= cc.Value.SendTime.TimeOfDay).ToList())
             {
-                if (now.TimeOfDay >= customerCampaign.Value.SendTime.TimeOfDay)
-                {
-                    var sendTask = _senderService.SendCampaignAsync(customerCampaign.Value, customerCampaign.Key);
-                    Task.Run(async () => await sendTask);
+                var sendTask = _senderService.SendCampaignAsync(customerCampaign.Value, customerCampaign.Key);
+                Task.Run(async () => await sendTask);
 
-                    _customersCampaigns.Remove(customerCampaign.Key);
-                }
+                _customersCampaigns.Remove(customerCampaign.Key);
             }
         }
 
