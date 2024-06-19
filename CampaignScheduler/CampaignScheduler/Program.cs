@@ -2,8 +2,6 @@ using CampaignScheduler;
 using CampaignScheduler.Models;
 using CampaignScheduler.Services;
 
-
-
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
