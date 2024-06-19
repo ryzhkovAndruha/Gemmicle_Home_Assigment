@@ -1,5 +1,4 @@
 ﻿using CampaignScheduler.Models;
-using Microsoft.Extensions.Logging;
 
 namespace CampaignScheduler.Services
 {
