@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+S9K0cXhJs4xgWo2/JwRKXx57Qn6PdBLmYuQgd1wHzglf9f+eLe9rZhfmpl/se+25wWNnE4oekhdNMMEeOvJtA==",
+  "dgSpecHash": "9Pd5041dNPjNazqqaXmabPZSpXQnOCmmpn3WCilRyzPX36iRzf3Uuh/A5Em/zSAAE+3wsfH/JqfF+14cpZQZeg==",
   "success": true,
-  "projectFilePath": "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
+  "projectFilePath": "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrii\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "C:\\Users\\Andrii\\.nuget\\packages\\microsoft.codeanalysis.common\\4.10.0\\microsoft.codeanalysis.common.4.10.0.nupkg.sha512",

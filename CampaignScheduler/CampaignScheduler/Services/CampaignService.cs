@@ -1,5 +1,6 @@
 ﻿using CampaignScheduler.Models;
 using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace CampaignScheduler.Services
 {
@@ -28,15 +29,18 @@ namespace CampaignScheduler.Services
             MidnightTimerInit();
         }
 
-        public void ScheduleCampaign()
+        public async Task ScheduleCampaignAsync()
         {
             var now = DateTime.Now;
+            var sendingTasks = new List<Task>();
 
             foreach (var customerCampaign in _customersCampaigns)
             {
                 if (now.TimeOfDay >= customerCampaign.Value.SendTime.TimeOfDay)
                 {
-                    _senderService.SendCampaign(customerCampaign.Value, customerCampaign.Key);
+                    var sendTask = _senderService.SendCampaignAsync(customerCampaign.Value, customerCampaign.Key);
+                    Task.Run(async () => await sendTask);
+
                     _customersCampaigns.Remove(customerCampaign.Key);
                 }
             }

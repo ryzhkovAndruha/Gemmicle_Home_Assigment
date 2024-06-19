@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj": {}
+    "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj": {}
   },
   "projects": {
-    "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj": {
+    "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
+        "projectUniqueName": "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
         "projectName": "CampaignScheduler",
-        "projectPath": "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
+        "projectPath": "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\CampaignScheduler.csproj",
         "packagesPath": "C:\\Users\\Andrii\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\Gemicle\\CampaignScheduler\\CampaignScheduler\\obj\\",
+        "outputPath": "E:\\GitHub\\Gemmicle_Home_Assigment\\Gemmicle_Home_Assigment\\CampaignScheduler\\CampaignScheduler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Andrii\\AppData\\Roaming\\NuGet\\NuGet.Config",

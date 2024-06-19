@@ -8,6 +8,6 @@ namespace CampaignScheduler.Services
 {
     public interface ICampaignService
     {
-        void ScheduleCampaign();
+        Task ScheduleCampaignAsync();
     }
 }

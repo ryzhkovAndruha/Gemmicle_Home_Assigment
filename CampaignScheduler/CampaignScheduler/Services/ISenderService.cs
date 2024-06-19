@@ -9,6 +9,6 @@ namespace CampaignScheduler.Services
 {
     internal interface ISenderService
     {
-        void SendCampaign(Campaign campaign, Customer customer);
+        Task SendCampaignAsync(Campaign campaign, Customer customer);
     }
 }

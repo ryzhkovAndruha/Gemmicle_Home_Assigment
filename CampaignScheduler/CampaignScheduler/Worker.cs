@@ -17,7 +17,7 @@ namespace CampaignScheduler
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                _campaignService.ScheduleCampaign();
+                await _campaignService.ScheduleCampaignAsync();
                 await Task.Delay(1000, stoppingToken);
             }
         }
